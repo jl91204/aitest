@@ -1,0 +1,13 @@
+
+    
+     <?import javafx.scene.text.TextFlow?>
+    <?import javafx.scene.layout.VBox?>
+    <?import javafx.scene.control.*?>
+    
+                         
+                         
+ <VBox layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="300.0" 
+  spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.ai.aitest.controller.MyTextFlow_Controller" >
+<TextFlow  prefHeight="200.0" prefWidth="200.0" fx:id="myTextFlow">
+</TextFlow>
+ </VBox>

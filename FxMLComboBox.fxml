@@ -1,0 +1,39 @@
+
+   <!--<?import javafx.scene.text.TextFlow?>
+
+
+ <TextFlow  fx:id="myTextFlow" prefHeight="200.0" prefWidth="200.0" fx:controller="com.ai.aitest.MyTextFlowController" />
+  
+  <TextFlow  fx:id="myTextFlow" prefHeight="200.0" prefWidth="200.0" />
+    -->
+  
+   <!-- <?import javafx.scene.control.*?>
+   <Button text="My Button"/> 
+ 
+ <?import javafx.scene.control.*?>
+ <TextFlow  prefHeight="200.0" prefWidth="200.0" >
+                            <children>
+                                <Label text="User Name:"         GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                           </children>
+  </TextFlow>
+  		  <TextFlow   />
+  -->
+    <?import javafx.scene.text.TextFlow?>
+    <?import javafx.scene.layout.HBox?>
+    <?import javafx.scene.control.*?>
+    
+                         
+                         
+  <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="1000.0" 
+  spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.ai.aitest.controller.MyComboBox_Controller" >
+
+    
+	<ComboBox fx:id="myComboBox_model" layoutX="100.0" layoutY="100.0" prefWidth="120.0" promptText="Choose a Model" />
+	<Button fx:id="Submit" mnemonicParsing="false"  text="View model details" />
+	<ComboBox fx:id="myComboBox_example" layoutX="100.0" layoutY="100.0" promptText="Choose a Example" />
+
+
+  		</HBox>
+                       
+           
+  

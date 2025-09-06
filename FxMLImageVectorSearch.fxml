@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ai.aitest.controller.MyImageVectorSearch_Controller">
+   
+   	 <fx:define>
+		 <fx:include  fx:id="vector_pane" source="FxMLLangChain.fxml" />
+	</fx:define>
+	
+   <top>
+      <VBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="30.0" prefWidth="200.0" spacing="10.0">
+                  <Label text="Step 1:" />
+                  <Button fx:id="bt_buckets" mnemonicParsing="false" text="show Buckets" />
+                  <Label text="Bucket chosen: " fx:id="lb_bucket"/>
+                  <ComboBox fx:id="cb_bucketname" prefWidth="150.0" promptText="Choose a Bucket"/>
+                  <Label text="Bucket Size: " fx:id="lb_bucketsize"/>
+                  <ComboBox fx:id="cb_filename" prefWidth="150.0" promptText="Select a Document"/>
+             </HBox>
+           <HBox prefHeight="30.0" prefWidth="200.0" spacing="10.0">
+                  <Label text="Step 2:" />
+                  <Button fx:id="bt_doc" mnemonicParsing="false" text="Show Doc table" />
+                  <Button fx:id="bt_copydoc" mnemonicParsing="false" text="Copy Doc to Table" />
+                  <Button fx:id="bt_vectortable" mnemonicParsing="false" text="Show Vector table" />
+                  <Button fx:id="bt_chunk" mnemonicParsing="false" text="chunk the file" />
+                  <Button fx:id="bt_vectorize" mnemonicParsing="false" text="vectorize the chunk" />
+            </HBox>
+ 
+             <HBox prefHeight="30.0" prefWidth="200.0" spacing="15.0">
+               <children>
+             	  <Label text="Step 3:" />
+                  <Label text="Store the Embedding Vectors: " />
+                  <Button mnemonicParsing="false" text="Vectorize Search" fx:id="bt_embedding_search"/>
+                  <Button mnemonicParsing="false" text="Vector Search Match" fx:id="bt_vectormatch"/>
+               </children>
+            </HBox>
+            
+         </children>
+      </VBox>
+   </top>
+   <center>
+    <VBox fx:id="vbox_play" prefHeight="650.0" prefWidth="789.0" BorderPane.alignment="CENTER"> 
+      <TableView fx:id="tv_showdata" prefHeight="430.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+      <TextArea fx:id="ta_display" prefHeight="350.0" prefWidth="789.0" BorderPane.alignment="CENTER" WrapText="true"/>
+      <TextArea fx:id="ta_prompt" WrapText="true" prefHeight="55.0" prefWidth="789.0" />
+      <HBox prefHeight="30.0" prefWidth="789.0">
+      <children>
+        <Button fx:id="bt_submit" mnemonicParsing="false" text="Search" />
+		<Button fx:id="bt_clear" mnemonicParsing="false" text="Clear Search" />	
+	    <Button fx:id="bt_chatHistory" mnemonicParsing="false" text="Search History" />
+      </children>
+      </HBox>
+      </VBox>
+   </center>
+</BorderPane>

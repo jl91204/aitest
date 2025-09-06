@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="705.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ai.aitest.controller.MyObjectStorage_Controller">
+   <left>
+             <VBox prefHeight="200.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ListView fx:id="lv_directory" layoutX="1.0" layoutY="-2.0" prefHeight="704.0" prefWidth="306.0" />
+               
+               <HBox prefHeight="100.0" prefWidth="4000.0" spacing="15.0">
+               	 <TextField fx:id="tf_bucketname"  prefWidth="100.0" /> 
+               	  <Button fx:id="bt_newbucket" mnemonicParsing="false" text="New Bucket" />
+               	   <Button fx:id="bt_deletebucket" mnemonicParsing="false" text="Delete Bucket" />
+               	    <Button fx:id="bt_downloadbucket" mnemonicParsing="false" text="download Bucket" />
+               </HBox>
+               </children>
+           </VBox>
+           
+
+   </left>
+   <center>
+           <VBox prefHeight="200.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ListView fx:id="lv_filenames" layoutX="1.0" layoutY="-2.0" prefHeight="704.0" prefWidth="506.0" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0"> 
+               	  	<Button fx:id="bt_uploadfile" mnemonicParsing="false" text="upload file" />
+               	   	<Button fx:id="bt_deletefile" mnemonicParsing="false" text="Delete file" />
+               	   	<Button fx:id="bt_downloadfile" mnemonicParsing="false" text="Download file" />
+               	   	<Button fx:id="bt_url" mnemonicParsing="false" text="File URL" />
+                 </HBox>
+               </children>
+           </VBox>
+       
+
+   </center>
+</BorderPane>

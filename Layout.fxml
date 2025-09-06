@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="900.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" 
+xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ai.aitest.controller.MyListView_Controller">
+
+	 <fx:define>
+		 <fx:include  fx:id="langchain_pane" source="FxMLLangChain.fxml" />
+	</fx:define>
+	
+	<fx:define>
+		 <fx:include  fx:id="selectai_pane" source="FxMLSelectAI.fxml" />
+	</fx:define>
+	
+	<fx:define>
+		 <fx:include  fx:id="vectorsearch_pane" source="FxMLVectorSearch.fxml" />
+	</fx:define>
+	
+	<fx:define>
+		 <fx:include  fx:id="llmlocal_pane" source="FxMLLLMLocal.fxml" />
+	</fx:define>
+	
+	<!--
+	<fx:define>
+		 <fx:include  fx:id="ailanguage_pane" source="FxMLAILanguage.fxml" />
+	</fx:define>
+	
+	<fx:define>
+		 <fx:include  fx:id="aiImage_pane" source="FxMLAIImage.fxml" />
+	</fx:define>
+	-->
+	
+	<fx:define>
+		 <fx:include  fx:id="objectStorage_pane" source="FxMLObjectStorage.fxml" />
+	</fx:define>
+	
+	<!--
+	<fx:define>
+		 <fx:include  fx:id="imagevectorsearch_pane" source="FxMLImageVectorSearch.fxml" />
+	</fx:define>
+	-->
+	
+	<!--
+	<fx:define>
+		 <fx:include  fx:id="langchain_pane" source="Primary.fxml" />
+	</fx:define>
+	-->
+      
+      <top>
+      <AnchorPane fx:id="imageAnchor" prefHeight="88.0" prefWidth="860.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="86.0" fitWidth="994.0" layoutX="5.0" layoutY="8.0" pickOnBounds="true">
+               <image>
+                  <Image url="@top_image.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   
+   <center>
+      <SplitPane fx:id="splitPane" dividerPositions="0.20735785953177258" prefHeight="450.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ListView fx:id="myListView" layoutX="1.0" layoutY="-2.0" prefHeight="704.0" prefWidth="206.0" />
+               </children>
+           </AnchorPane>
+               <fx:include  fx:id="AnchorPane_PlayGround" source="FxMLPlayGround.fxml" />
+
+               
+        </items>
+      </SplitPane>
+   </center>
+
+
+</BorderPane>
